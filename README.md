@@ -68,7 +68,7 @@ Agent Request
 - Payments go directly to your wallet — no middleman
 
 ```html
-<script src="https://agenticgateway.xyz/embed.js"
+<script src="https://agenticgateway.onrender.com/embed.js"
         data-price="0.10"
         data-wallet="0xYourWallet">
 </script>
@@ -77,7 +77,7 @@ Agent Request
 **Register your domain:**
 
 ```bash
-curl -X POST https://agenticgateway.xyz/registry \
+curl -X POST https://agenticgateway.onrender.com/registry \
   -H "Content-Type: application/json" \
   -d '{"domain": "yoursite.com", "price": "0.10", "owner": "0xYourWallet"}'
 ```
@@ -112,7 +112,7 @@ curl https://example.com/data
 # 2. Pay USDC on Base to the owner wallet
 
 # 3. Submit txHash to facilitator
-curl -X POST https://agenticgateway.xyz/verify \
+curl -X POST https://agenticgateway.onrender.com/verify \
   -H "Content-Type: application/json" \
   -d '{"txHash": "0x...", "domain": "example.com"}'
 # Returns { "token": "eyJ..." }
