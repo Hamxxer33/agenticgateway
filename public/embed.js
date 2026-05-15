@@ -189,7 +189,7 @@
     const price = script.dataset.price || '';
     const wallet = script.dataset.wallet || '';
     const domain = script.dataset.domain || window.location.hostname;
-    const facilitator = script.dataset.facilitator || 'https://agenticgateway.xyz';
+    const facilitator = script.dataset.facilitator || 'https://agenticgateway.onrender.com';
 
     if (!price || !wallet) return;
 

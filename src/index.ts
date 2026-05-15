@@ -12,6 +12,15 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+      res.json({
+            name: 'Agentic Gateway',
+                version: '1.0.0',
+                    status: 'live',
+                        docs: 'https://github.com/Hamxxer33/agenticgateway'
+      });
+});
+
 app.use('/verify', verifyRouter);
 app.use('/registry', registryRouter);
 
