@@ -8,7 +8,7 @@ export class AgenticGateway {
 
   constructor(config: AgenticGatewayConfig) {
     this.privateKey = config.privateKey;
-    this.facilitator = config.facilitator || 'https://agenticgateway.xyz';
+    this.facilitator = config.facilitator || 'https://agenticgateway.onrender.com';
     this.tokenCache = new Map();
   }
 
