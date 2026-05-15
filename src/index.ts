@@ -13,12 +13,21 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-      res.json({
-            name: 'Agentic Gateway',
-                version: '1.0.0',
-                    status: 'live',
-                        docs: 'https://github.com/Hamxxer33/agenticgateway'
-      });
+      res.send(`<!DOCTYPE html>
+      <html>
+      <head>
+        <meta name="virtual-protocol-site-verification" content="822c917a2d9cfba96c7aa343a5b694a1" />
+          <title>Agentic Gateway</title>
+          </head>
+          <body>
+            <pre>${JSON.stringify({
+                    name: 'Agentic Gateway',
+                        version: '1.0.0',
+                            status: 'live',
+                                docs: 'https://github.com/Hamxxer33/agenticgateway'
+            }, null, 2)}</pre>
+            </body>
+            </html>`);
 });
 
 app.use('/verify', verifyRouter);
